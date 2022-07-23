@@ -1,0 +1,5 @@
+dogs = read.table("F:\\0Teaching UTAR\\40May22\\202205MEME16203\\202205MEME16203-Notes\\MEME16203-Rcodes\\dogs.txt", col.names= c("Drug", "Disease", "Y"))
+head(dogs)
+dogs$Drug = as.factor(dogs$Drug)
+dogs$Disease = as.factor(dogs$Disease)
+lm.fit = lm(Y~Drug*Disease, data = dogs)
