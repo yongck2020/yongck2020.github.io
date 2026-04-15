@@ -1,0 +1,8 @@
+f = function(x){
+y= pgamma(2,x+1,2) - 0.5
+y
+}
+library(nleqslv)
+xstart = 1
+nleqslv(xstart, f, control=list(btol=.01),
+method="Newton")
